@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent implements OnInit {
+  name: string = '';
+  lastName: string = '';
+  email: string = '';
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
 }

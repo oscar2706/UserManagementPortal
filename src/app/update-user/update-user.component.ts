@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update-user.component.css']
 })
 export class UpdateUserComponent implements OnInit {
-
+  name: string = '';
+  lastName: string = '';
+  email: string = '';
+  
   constructor() { }
 
   ngOnInit(): void {
