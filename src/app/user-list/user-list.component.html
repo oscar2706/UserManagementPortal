@@ -1,3 +1,6 @@
+<p-toast></p-toast>
+<p-confirmPopup></p-confirmPopup>
+
 <p-table [value]="users">
   <ng-template pTemplate="header">
     <tr>
@@ -35,10 +38,10 @@
       <td>{{user.lastName}}</td>
       <td>{{user.email}}</td>
       <td>
-        <button pButton type="button" label="Update" icon="pi pi-user-edit" class="p-button-text p-button-sm"
-          style="margin-right: 0.5rem;"></button>
+        <update-user></update-user>
+
         <button pButton type="button" label="Delete" icon="pi pi-trash"
-          class="p-button-sm p-button-text p-button-danger"></button>
+          class="p-button-sm p-button-text p-button-danger" (click)="confirm($event)"></button>
       </td>
     </tr>
   </ng-template>

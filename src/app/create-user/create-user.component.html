@@ -1,18 +1,27 @@
-<h2>Create User</h2>
-
-<span class="p-float-label input">
-  <input id="float-input" type="text" pInputText [(ngModel)]="name">
-  <label for="float-input">First Name</label>
-</span>
-
-<span class="p-float-label input">
-  <input id="float-input" type="text" pInputText [(ngModel)]="lastName">
-  <label for="float-input">Last Name</label>
-</span>
-
-<span class="p-float-label input">
-  <input id="float-input" type="text" pInputText [(ngModel)]="email">
-  <label for="float-input">Email</label>
-</span>
-
-<p-button label="Submit"></p-button>
+<h1>User List
+  <p-button label="Create User"
+  icon="pi pi-user-plus"
+  style="margin-left: 1.5rem;"
+  (click)="showDialog()"></p-button>
+</h1>
+<p-dialog header="Create User" 
+  [(visible)]="display"
+  [modal]="true">
+  <span class="p-float-label input">
+    <input id="float-input" type="text" pInputText [(ngModel)]="name">
+    <label for="float-input">First Name</label>
+  </span>
+  
+  <span class="p-float-label input">
+    <input id="float-input" type="text" pInputText [(ngModel)]="lastName">
+    <label for="float-input">Last Name</label>
+  </span>
+  
+  <span class="p-float-label input">
+    <input id="float-input" type="text" pInputText [(ngModel)]="email">
+    <label for="float-input">Email</label>
+  </span>
+  
+  <p-button label="Submit"
+    (click)="hideDialog()"></p-button>
+</p-dialog>

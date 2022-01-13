@@ -10,6 +10,15 @@ export class UpdateUserComponent implements OnInit {
   lastName: string = '';
   email: string = '';
   
+  display: boolean = false;
+
+  showDialog() {
+    this.display = true;
+  }
+  hideDialog(){
+    this.display = false;
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

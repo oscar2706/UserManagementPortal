@@ -1,18 +1,22 @@
-<h2>Update User</h2>
+<button pButton type="button" label="Update" icon="pi pi-user-edit" 
+  class="p-button-text p-button-sm" style="margin-right: 0.5rem;"
+  (click)="showDialog()"></button>
 
-<span class="p-float-label input">
-  <input id="float-input" type="text" pInputText [(ngModel)]="name">
-  <label for="float-input">First Name</label>
-</span>
+<p-dialog header="Update User" [(visible)]="display" [modal]="true">
+  <span class="p-float-label input">
+    <input id="float-input" type="text" pInputText [(ngModel)]="name">
+    <label for="float-input">First Name</label>
+  </span>
 
-<span class="p-float-label input">
-  <input id="float-input" type="text" pInputText [(ngModel)]="lastName">
-  <label for="float-input">Last Name</label>
-</span>
+  <span class="p-float-label input">
+    <input id="float-input" type="text" pInputText [(ngModel)]="lastName">
+    <label for="float-input">Last Name</label>
+  </span>
 
-<span class="p-float-label input">
-  <input id="float-input" type="text" pInputText [(ngModel)]="email">
-  <label for="float-input">Email</label>
-</span>
+  <span class="p-float-label input">
+    <input id="float-input" type="text" pInputText [(ngModel)]="email">
+    <label for="float-input">Email</label>
+  </span>
 
-<p-button label="Submit"></p-button>
+  <p-button label="Submit" (click)="hideDialog()"></p-button>
+</p-dialog>

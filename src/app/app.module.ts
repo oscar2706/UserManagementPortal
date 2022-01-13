@@ -12,6 +12,11 @@ import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
+
+import { ConfirmPopupModule } from "primeng/confirmpopup";
+import { ToastModule } from "primeng/toast";
+import { ConfirmationService, MessageService } from "primeng/api";
 
 
 @NgModule({
@@ -28,9 +33,12 @@ import { TableModule } from 'primeng/table';
     InputTextModule,
     ButtonModule,
     FormsModule,
-    TableModule
+    TableModule,
+    DialogModule,
+    ConfirmPopupModule,
+    ToastModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [ConfirmationService, MessageService]
 })
 export class AppModule { }
